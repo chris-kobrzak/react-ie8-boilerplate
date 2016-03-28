@@ -2,7 +2,7 @@
   "name": "react-ie8-boilerplate",
   "version": "0.0.1",
   "description": "React-Webpack-hot reload boilerplate project with partial support for IE8",
-  "main": "index.js",
+  "main": "src/main.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
