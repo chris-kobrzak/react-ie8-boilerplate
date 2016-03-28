@@ -1,24 +1,30 @@
+var path = require("path")
+var webpack = require("webpack")
+
 var config = {
-  entry: "./src/main.jsx",
+  entry: [
+    "webpack-dev-server/client?http://localhost:3200",
+    "webpack/hot/only-dev-server",
+    "./src/main.jsx"
+  ],
 
   output: {
-    path: "./src/",
-    filename: "bundle.js"
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/static/"
   },
 
   module: {
     loaders: [{
       test: /\.jsx?/,
       exclude: /node\_modules/,
-      loaders: [ "babel" ]
+      loaders: [ "react-hot", "babel" ]
     }]
   },
 
-  devServer: {
-    inline: true,
-    contentBase: './src',
-    port: 3333
-  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
 
   devtool: "source-map"
 }

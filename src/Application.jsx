@@ -1,5 +1,7 @@
 import React from 'react'
 
-const Application = () => <h1>Hello, world!</h1>
-
-export default Application
+export default class Application extends React.Component {
+  render () {
+    return <h1>Hello, world!</h1>
+  }
+}
