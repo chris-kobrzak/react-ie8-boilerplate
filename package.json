@@ -4,6 +4,7 @@
   "description": "React-Webpack-hot reload boilerplate project with partial support for IE8",
   "main": "src/main.jsx",
   "scripts": {
+    "browse": "open http://localhost:3200/",
     "build": "npm run prod:build",
     "clean": "rm -fr dist/*",
     "start": "npm run dev:start",
@@ -12,6 +13,7 @@
     "demo:build": "webpack",
     "predemo:start": "npm run clean & npm run demo:build",
     "demo:start": "ws -r '/static/* -> /dist/$1' ",
+    "prod:browse": "open http://localhost:8000/",
     "prod:build": "webpack -p",
     "preprod:start": "npm run clean & npm run prod:build",
     "prod:start": "ws -r '/static/* -> /dist/$1' "
