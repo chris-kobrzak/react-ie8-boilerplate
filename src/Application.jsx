@@ -2,6 +2,7 @@ import React from 'react'
 
 export default class Application extends React.Component {
   render () {
-    return <h1>Hello, world!</h1>
+    let foo = message => ( `Hello ${message}` )
+    return <h1>{ foo('world!') }</h1>
   }
 }
